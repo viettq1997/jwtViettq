@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://192.168.100.164:3306/vse900
+    username: iist_vse
+    password: iist_vse@123
+    driverClassName: org.mariadb.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+
+  jpa:
+    hibernate:
+      #      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  h2:
+    console:
+      enabled: true
+  security:
+    user:
+      name: viettq
+      password: 1234567
+server:
+  port: 9001
+  servlet:
+    context-path: /
+jwt.secret : javainuse
